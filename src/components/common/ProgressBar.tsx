@@ -1,23 +1,16 @@
 import React from 'react';
 
 interface ProgressBarProps {
-  current: number;
-  total: number;
-  className?: string;
+  progress: number;
 }
 
-export const ProgressBar: React.FC<ProgressBarProps> = ({ current, total, className = '' }) => {
-  const percentage = (current / total) * 100;
-
+export const ProgressBar: React.FC<ProgressBarProps> = ({ progress }) => {
   return (
-    <div className={`w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 ${className}`}>
+    <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
       <div
-        className="bg-primary-500 h-2.5 rounded-full transition-all duration-300 ease-in-out"
-        style={{ width: `${percentage}%` }}
+        className="bg-primary-600 h-2.5 rounded-full transition-all duration-300"
+        style={{ width: `${progress}%` }}
       />
-      <div className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-        {current} / {total} 완료
-      </div>
     </div>
   );
 };

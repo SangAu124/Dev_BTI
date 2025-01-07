@@ -47,26 +47,28 @@ export const Result: React.FC = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <ResultCard result={result} />
-      <div className="mt-8 flex justify-center gap-4">
-        <button
-          onClick={() => navigate('/')}
-          className="px-6 py-3 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors"
-        >
-          홈으로
-        </button>
-        <button
-          onClick={() => {
-            localStorage.removeItem('devbti_result');
-            localStorage.removeItem('devbti_answers');
-            localStorage.removeItem('devbti_scores');
-            navigate('/test');
-          }}
-          className="px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors"
-        >
-          다시 테스트하기
-        </button>
+    <div className="min-h-screen p-4">
+      <div className="max-w-2xl mx-auto">
+        <ResultCard result={result} />
+        <div className="mt-8 flex justify-center gap-4">
+          <button
+            onClick={() => navigate('/')}
+            className="px-6 py-3 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors"
+          >
+            홈으로
+          </button>
+          <button
+            onClick={() => {
+              localStorage.removeItem('devbti_result');
+              localStorage.removeItem('devbti_answers');
+              localStorage.removeItem('devbti_scores');
+              navigate('/test');
+            }}
+            className="px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors"
+          >
+            다시 테스트하기
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -17,3 +17,19 @@ export interface TestResult {
     bad: string[];
   };
 }
+
+export interface Question {
+  id: number;
+  text: string;
+  targetType: string;
+  oppositeType: string;
+  category: 'expression' | 'approach' | 'optimization' | 'pattern';
+}
+
+export type PersonalityType = 
+  | 'D' | 'M'  // Detail vs Macro
+  | 'C' | 'E'  // Conservative vs Experimental
+  | 'P' | 'H'  // Practical vs Theoretical
+  | 'A' | 'S'; // Active vs Static
+
+export type AnswerLevel = -3 | -2 | -1 | 0 | 1 | 2 | 3;

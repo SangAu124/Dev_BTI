@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { UserAnswer, PersonalityType } from '../types';
+import { UserAnswer } from '../types';
 import { questions } from '../constants/questions';
 
 export const useTest = () => {
