@@ -44,7 +44,7 @@ export const Home: React.FC = () => {
       </div>
 
       <footer className="mt-16 text-center text-gray-500 dark:text-gray-400">
-        <p> 2025 Dev_BTI. All rights reserved.</p>
+        <p> 2025 SangAu. All rights reserved.</p>
       </footer>
     </div>
   );
